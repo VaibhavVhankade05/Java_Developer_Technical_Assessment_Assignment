@@ -316,6 +316,19 @@ POST http://localhost:8080/api/v1/products/2/items
 }
 
 
+**STEP 10 — Refresh Token**
+POST http://localhost:8080/api/v1/auth/refresh
+**Input:**
+{
+    "refreshToken": "2145ade1-f6b9-465d-909f-c0fa773ca564"
+}
+**Output:**
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YWliaGF2IiwiaWF0IjoxNzcxNTg1OTU3LCJleHAiOjE3NzE1ODk1NTd9.LXoIBOXNbg3GRDsxIdDHZE8rR9xVDRp5ar_1zt4yhVk",
+    "refreshToken": "35c846f2-132b-4113-bb9d-87c59b09a103"
+}
+
+
 
 
 **Author**
