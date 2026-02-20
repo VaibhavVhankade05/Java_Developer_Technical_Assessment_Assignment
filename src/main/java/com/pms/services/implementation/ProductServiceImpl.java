@@ -82,7 +82,7 @@ public class ProductServiceImpl implements ProductService
         productRepository.deleteById(id);
     }
 
-    // 🔹 Mapping Method
+    //  Mapping Method
     private ProductResponseDTO mapToDTO(Product product) {
         return ProductResponseDTO.builder()
                 .id(product.getId())
@@ -121,6 +121,7 @@ public class ProductServiceImpl implements ProductService
 
         // Create item
         Item item = Item.builder()
+                .name(dto.getName())
                 .quantity(dto.getQuantity())
                 .product(product)
                 .build();
@@ -129,6 +130,7 @@ public class ProductServiceImpl implements ProductService
 
         return ItemResponseDTO.builder()
                 .id(savedItem.getId())
+                .name(savedItem.getName())
                 .quantity(savedItem.getQuantity())
                 .build();
     }
